@@ -3,7 +3,7 @@
 ### Mini Project 1
  
  
-# Project Title
+# Mini Project 1
  
 Simple overview of use/purpose.
  
