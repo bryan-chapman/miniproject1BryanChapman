@@ -32,16 +32,19 @@ for stock in mystocks:
     mystockdata[stock] = []
 
 
-    # creats a list of closing prices
+    # create5 a list of closing prices
     for price in last10['Close']:
         mystockdata[stock].append(price)
     mystock = np.array(mystockdata[stock])
 
     #create a variable to determin high and low in a time period.
     hl = copy.copy(mystockdata[stock])
+    hl.sort()
 
     plt.plot(mystockdata[stock])
+    plt.title(stock)
     plt.axis((0,10,hl[0]-10, hl[-1]+10))
     plt.xlabel('Trading Days Ago')
     plt.ylabel('Closing Price')
-    plt.show
+    plt.savefig(f'charts/{stock}.png')
+    plt.show()
